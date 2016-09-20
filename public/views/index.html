@@ -3,10 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>Hilariash!</title>
+    <link href = "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href = "./styles/styles.css" rel="stylesheet" />
+
   </head>
   <body>
-    <h1>Hi</h1>
+    <header ng-include="'/views/templates/header.html'" ></header>
+      <div ng-include="'./views/templates/nav.html'"></div>
+      <main ng-view class="container"></main>
+    <footer ng-include="'./views/templates/footer.html'"></footer>
+
     <script src = "./vendors/angular.min.js"></script>
-    <script src = "./clientapp.js"></script>
+    <script src = "../scripts/clientapp.js"></script>
+
+    <script src = "./vendors/ng-file-upload.min.js"></script>
+    <script src = "./vendors/ng-file-upload-shim.min.js"></script>
+    <script src = "/public/views/signInController.js"></script>
+    <script src = "/public/views/homeController.js"></script>
   </body>
 </html>
